@@ -8,8 +8,8 @@ provider "aws" {
 
 //creation d'un VPC avec un subnet public, privé, une NAT gateway avec les routes correspondantes 
 module "vpc" {
-  source = "../"
-
+  #source = "../"
+  source = "terraform-aws-modules/vpc/aws"
   name = "guacamole-vpc"
 
   cidr = "172.31.0.0/16"
